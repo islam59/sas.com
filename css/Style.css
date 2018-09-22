@@ -1,0 +1,22 @@
+*{
+	font-family: "Times New Roman", Times, serif;
+}
+/*custom style file*/
+.section-header{}
+.menu{
+	border:0px;
+	border-radius:0;
+	background: #1e71ed;
+	margin-bottom: 0px;
+}
+
+.section-content{
+	min-height: 87.5vh;
+}
+
+.section-footer{
+	background: #1e71ed;
+	color:white; 
+	line-height: 5vh;  
+	text-align: center; 
+}
