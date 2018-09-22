@@ -37,7 +37,7 @@
   }
 ?>
 <?php 
-	if(isset($_POST['department_name'])){
+	if(isset($_GET['save'])){
 		$department_name = $FM->validation($_POST['department_name']);
 		$department_name =  mysqli_real_escape_string($DB->link,$department_name);
 
@@ -69,7 +69,7 @@
 <div class="modal fade" id="addDepartment" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-<form class="form-horizontal" action="index.php?page=Departments" method="post">
+<form class="form-horizontal" action="index.php?page=Departments&save" method="post">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">Add Department</h4>
