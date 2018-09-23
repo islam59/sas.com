@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 22, 2018 at 10:04 PM
+-- Generation Time: Sep 23, 2018 at 09:38 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -47,6 +47,31 @@ INSERT INTO `tb_department` (`id`, `department_name`, `status`) VALUES
 (15, 'ZOOLOGY', 0),
 (16, 'FINANCE &amp; BANKING', 0),
 (20, 'STATISTICS', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_profile`
+--
+
+CREATE TABLE `tb_profile` (
+  `id` int(11) NOT NULL,
+  `first_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
+  `designation` varchar(255) NOT NULL,
+  `education` text NOT NULL,
+  `phone` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `dept_id` varchar(255) NOT NULL,
+  `status` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_profile`
+--
+
+INSERT INTO `tb_profile` (`id`, `first_name`, `last_name`, `designation`, `education`, `phone`, `email`, `dept_id`, `status`) VALUES
+(1, 'Islam', 'Hossain', 'Admin', 'n/a', '+880 1914 441334', 'islamhossainwork@gmail.com', '10', 0);
 
 -- --------------------------------------------------------
 
@@ -109,6 +134,12 @@ ALTER TABLE `tb_department`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tb_profile`
+--
+ALTER TABLE `tb_profile`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tb_student`
 --
 ALTER TABLE `tb_student`
@@ -128,17 +159,22 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT for table `tb_department`
 --
 ALTER TABLE `tb_department`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+--
+-- AUTO_INCREMENT for table `tb_profile`
+--
+ALTER TABLE `tb_profile`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tb_student`
 --
 ALTER TABLE `tb_student`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
