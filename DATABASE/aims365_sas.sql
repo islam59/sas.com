@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 23, 2018 at 09:38 PM
+-- Generation Time: Sep 23, 2018 at 10:18 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -19,6 +19,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `aims365_sas`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_course`
+--
+
+CREATE TABLE `tb_course` (
+  `id` int(11) NOT NULL,
+  `course_name` varchar(255) NOT NULL,
+  `status` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_course`
+--
+
+INSERT INTO `tb_course` (`id`, `course_name`, `status`) VALUES
+(2, 'Bangla', 0),
+(3, 'Bangla101', 0);
 
 -- --------------------------------------------------------
 
@@ -121,11 +141,17 @@ CREATE TABLE `tb_user` (
 --
 
 INSERT INTO `tb_user` (`id`, `username`, `password`, `type`, `profile_id`, `status`) VALUES
-(1, 'IslamHossain', '202cb962ac59075b964b07152d234b70', 'Admin', 1, 0);
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Admin', 1, 0);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `tb_course`
+--
+ALTER TABLE `tb_course`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tb_department`
@@ -155,6 +181,11 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT for dumped tables
 --
 
+--
+-- AUTO_INCREMENT for table `tb_course`
+--
+ALTER TABLE `tb_course`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tb_department`
 --
