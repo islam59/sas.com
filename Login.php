@@ -31,7 +31,7 @@
 				Session::set("userId", $value['id']);
 				Session::set("type", $value['type']);
 							 
-					if(Session::get('type') == 'Admin'){
+					if(Session::get('type')){
 						header("Location:index.php");	
 					}else{
 						$msg = '<span style="color:red;">Login Failed !</span>';
