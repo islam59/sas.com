@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 23, 2018 at 10:18 PM
+-- Generation Time: Sep 23, 2018 at 10:57 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -96,6 +96,23 @@ INSERT INTO `tb_profile` (`id`, `first_name`, `last_name`, `designation`, `educa
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tb_schedule`
+--
+
+CREATE TABLE `tb_schedule` (
+  `id` int(11) NOT NULL,
+  `dept_id` varchar(255) NOT NULL,
+  `course_id` varchar(255) NOT NULL,
+  `profile_id` varchar(255) NOT NULL,
+  `room_no` varchar(255) NOT NULL,
+  `class_date` varchar(255) NOT NULL,
+  `class_time` varchar(255) NOT NULL,
+  `status` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tb_student`
 --
 
@@ -166,6 +183,12 @@ ALTER TABLE `tb_profile`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tb_schedule`
+--
+ALTER TABLE `tb_schedule`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tb_student`
 --
 ALTER TABLE `tb_student`
@@ -196,6 +219,11 @@ ALTER TABLE `tb_department`
 --
 ALTER TABLE `tb_profile`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `tb_schedule`
+--
+ALTER TABLE `tb_schedule`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tb_student`
 --
